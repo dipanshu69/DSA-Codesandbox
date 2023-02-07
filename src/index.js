@@ -1,10 +1,14 @@
-import "./styles.css";
+const fibSeries = (n) => {
+  let fib = [0, 1];
+  if (n === 2) {
+    return fib;
+  } else {
+    for (let i = 2; i < n; i++) {
+      fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib;
+  }
+};
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+console.log(fibSeries(7));
+//Big-O = O(n);
