@@ -150,20 +150,37 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // //Big-O = O[n];
 
 //Prime number
-var isPrime = function isPrime(n) {
-  if (n < 2) {
+// const isPrime = (n) => {
+//   if (n < 2) {
+//     return false;
+//   }
+//   for (let i = 2; i < n; i++) {
+//     if (n % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(isPrime(9));
+
+//big-O = O(n);linear
+
+//isPowerOfTwo
+
+var isPowerOfTwo = function isPowerOfTwo(n) {
+  if (n < 1) {
     return false;
   }
-  for (var i = 2; i < n; i++) {
-    if (n % i === 0) {
+  while (n > 1) {
+    if (n % 2 !== 0) {
       return false;
     }
+    n = n / 2;
   }
   return true;
 };
-console.log(isPrime(9));
-
-//big-O = O(n);linear
+console.log(isPowerOfTwo(18));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
