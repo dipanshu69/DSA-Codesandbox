@@ -48,17 +48,32 @@
 
 //isPowerOfTwo
 
-const isPowerOfTwo = (n) => {
-  if (n < 1) {
-    return false;
+// const isPowerOfTwo = (n) => {
+//   if (n < 1) {
+//     return false;
+//   }
+//   while (n > 1) {
+//     if (n % 2 !== 0) {
+//       return false;
+//     }
+//     n = n / 2;
+//   }
+//   return true;
+// };
+
+// console.log(isPowerOfTwo(18));
+
+//recursiveFibonacci
+
+const recursiveFibonacci = (n) => {
+  if (n < 2) {
+    return n;
   }
-  while (n > 1) {
-    if (n % 2 !== 0) {
-      return false;
-    }
-    n = n / 2;
-  }
-  return true;
+  return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
 };
 
-console.log(isPowerOfTwo(18));
+console.log(recursiveFibonacci(0));
+console.log(recursiveFibonacci(1));
+console.log(recursiveFibonacci(6)); 
+
+BigO = O(2^n);
