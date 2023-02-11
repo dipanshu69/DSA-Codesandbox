@@ -185,16 +185,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 //recursiveFibonacci
 
-var recursiveFibonacci = function recursiveFibonacci(n) {
-  if (n < 2) {
-    return n;
+// const recursiveFibonacci = (n) => {
+//   if (n < 2) {
+//     return n;
+//   }
+//   return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+// };
+
+// console.log(recursiveFibonacci(0));
+// console.log(recursiveFibonacci(1));
+// console.log(recursiveFibonacci(6));
+
+// BigO = O(2^n);
+
+var factorial = function factorial(n) {
+  if (n === 0) {
+    return 1;
   }
-  return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+  return n * factorial(n - 1);
 };
-console.log(recursiveFibonacci(0));
-console.log(recursiveFibonacci(1));
-console.log(recursiveFibonacci(6));
-BigO = O(2 ^ n);
+console.log(factorial(4));
+// BigO = O(n);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
